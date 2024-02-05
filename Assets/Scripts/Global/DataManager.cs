@@ -10,6 +10,7 @@ public class DataManager : MonoBehaviour
     public static DataManager instance;
 
     public DepositController depositController;
+    public WithdrawController withdrawController;
 
     [SerializeField] private TextMeshProUGUI ownedCash;
     [SerializeField] private TextMeshProUGUI balanceCash;
@@ -41,6 +42,12 @@ public class DataManager : MonoBehaviour
     {
         ownedCash.text = depositController.ownedCash.ToString("N0");
         balanceCash.text = depositController.balanceCash.ToString("N0");
+    }
+
+    public void UpdateUI_2()
+    {
+        ownedCash.text = withdrawController.ownedCash.ToString("N0");
+        balanceCash.text = withdrawController.balanceCash.ToString("N0");
     }
 
     public void OpenWarningMenu()
