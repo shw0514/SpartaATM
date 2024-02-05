@@ -2977,7 +2977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depositController: {fileID: 1533392836}
-  withdrawController: {fileID: 0}
+  withdrawController: {fileID: 282434032}
   ownedCash: {fileID: 1686457914}
   balanceCash: {fileID: 926193295}
   warningMenu: {fileID: 352841353}
