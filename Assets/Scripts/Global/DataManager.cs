@@ -11,8 +11,11 @@ public class DataManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI ownedCash;
     [SerializeField] private TextMeshProUGUI balanceCash;
-    private int ownedCashData;
-    private int balanceCashData;
+
+    public GameObject warningMenu;
+
+    public int ownedCashData;
+    public int balanceCashData;
     private void Awake()
     {
         instance = this;
@@ -29,5 +32,10 @@ public class DataManager : MonoBehaviour
         balanceCashData = 50000;
         ownedCash.text = ownedCashData.ToString("N0");
         balanceCash.text = balanceCashData.ToString("N0");
+    }
+
+    public void OpenWarningMenu()
+    {
+        warningMenu.SetActive(true);
     }
 }

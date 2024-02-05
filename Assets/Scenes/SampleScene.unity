@@ -3258,6 +3258,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedCash: {fileID: 1686457914}
   balanceCash: {fileID: 926193295}
+  warningMenu: {fileID: 352841353}
+  ownedCashData: 0
+  balanceCashData: 0
 --- !u!4 &1184507412
 Transform:
   m_ObjectHideFlags: 0
@@ -4049,6 +4052,7 @@ GameObject:
   - component: {fileID: 1467592378}
   - component: {fileID: 1467592377}
   - component: {fileID: 1467592376}
+  - component: {fileID: 1467592379}
   m_Layer: 0
   m_Name: deposit
   m_TagString: Untagged
@@ -4120,7 +4124,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1467592377}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1467592379}
+        m_TargetAssemblyTypeName: DepositBtn, Assembly-CSharp
+        m_MethodName: OpenDepositMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1467592377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4159,6 +4175,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467592374}
   m_CullTransparentMesh: 1
+--- !u!114 &1467592379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467592374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1cead2302ee89449721ff89591ffad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depositMenu: {fileID: 1533392832}
 --- !u!1 &1486985690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4223,6 +4252,7 @@ GameObject:
   - component: {fileID: 1533392833}
   - component: {fileID: 1533392835}
   - component: {fileID: 1533392834}
+  - component: {fileID: 1533392836}
   m_Layer: 0
   m_Name: DepositMenu
   m_TagString: Untagged
@@ -4296,6 +4326,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533392832}
   m_CullTransparentMesh: 1
+--- !u!114 &1533392836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533392832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacc0fe0512aac44da92d1e7f3d9b167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1556409208
 GameObject:
   m_ObjectHideFlags: 0
@@ -6068,7 +6110,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2037935321}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1533392836}
+        m_TargetAssemblyTypeName: DepositController, Assembly-CSharp
+        m_MethodName: Deposit10000
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2037935321
 MonoBehaviour:
   m_ObjectHideFlags: 0
