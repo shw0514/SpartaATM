@@ -8,6 +8,7 @@ public class DepositController : MonoBehaviour
 {
     public InputField inputField;
     public int inputValue;
+    public bool isCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,13 +62,17 @@ public class DepositController : MonoBehaviour
 
     public void DepositInputValue()
     {
-        inputValue = int.Parse(inputField.text);
+        isCount = int.TryParse(inputField.text, out int inputValue);
         if (DataManager.instance.ownedCashData >= inputValue)
         {
             DataManager.instance.ownedCashData -= inputValue;
             DataManager.instance.balanceCashData += inputValue;
         }
-        else
+        else if (!isCount)
+        {
+            Debug.Log("숫자를 입력해주세요");
+        }
+        else if (DataManager.instance.ownedCashData < inputValue)
         {
             DataManager.instance.OpenWarningMenu();
         }

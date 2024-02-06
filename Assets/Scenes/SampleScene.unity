@@ -714,8 +714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df00a5ab938623941bf08a8c851e69ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownedCash: 0
-  balanceCash: 0
   inputField: {fileID: 63984241}
   inputValue: 0
 --- !u!1 &343748792
@@ -2976,8 +2974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70de8338f454f047b2cc7e6b3a6544d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depositController: {fileID: 1533392836}
-  withdrawController: {fileID: 282434032}
   ownedCash: {fileID: 1686457914}
   balanceCash: {fileID: 926193295}
   warningMenu: {fileID: 352841353}
@@ -3217,7 +3213,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC785\uAE08"
+  m_Text: "\uCD9C\uAE08"
 --- !u!222 &1272891990
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3917,10 +3913,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dacc0fe0512aac44da92d1e7f3d9b167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownedCash: 0
-  balanceCash: 0
   inputField: {fileID: 655624941}
   inputValue: 0
+  isCount: 0
 --- !u!1 &1556409208
 GameObject:
   m_ObjectHideFlags: 0
