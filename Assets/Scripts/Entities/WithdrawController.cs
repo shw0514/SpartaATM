@@ -60,25 +60,15 @@ public class WithdrawController : MonoBehaviour
 
     public void WithdrawInputValue()
     {
-        bool isNumeral = int.TryParse(inputField.text, out int inputValue);
-
-        if (isNumeral)
+        inputValue = int.Parse(inputField.text);
+        if (DataManager.instance.balanceCashData >= inputValue)
         {
-            if (DataManager.instance.balanceCashData >= inputValue)
-            {
-                DataManager.instance.ownedCashData += inputValue;
-                DataManager.instance.balanceCashData -= inputValue;
-            }
-            else if (DataManager.instance.balanceCashData < inputValue)
-            {
-                DataManager.instance.OpenWarningMenu();
-            }
+            DataManager.instance.ownedCashData += inputValue;
+            DataManager.instance.balanceCashData -= inputValue;
         }
         else
         {
-            Debug.Log("숫자를 입력해주세요");
+            DataManager.instance.OpenWarningMenu();
         }
-
     }
 }
-
